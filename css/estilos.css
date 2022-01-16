@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+
+/*.conteudo-principal .paineis .titulo {
+    background-color: aqua; 
+
+    /*colocando as classes sem a virgula você esta especificando dentro da primeira classe e a ultima classe é a que sera atribuida
+    a cor, caso queira aplicar em várias classes separe por virgula
+
+    .conteudo-principal, .paineis, .titulo {
+*/
+
+body {
+    font-family: 'Mukta', sans-serif;
+}
+
+/* O asterisco serve pra estilizar todos os elementos html
+    que você adicionar e alterar
+
+    vamos zerar a margin e o padding
+    */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black
+}
+
+img {
+    max-width: 100%;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* serve para suavizar o sroll a rolagem da pagina*/
+}
+
+/*LOGO*/
+.logo .imagem {
+    width: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.logo .titulo {
+    margin-left: 7px;
+    font-size: 17px;
+    transition: 0.3s ease-in-out;
+    font-weight: 800;
+}
+
+.logo .titulo:hover {
+    color: #1ed760;
+}
+
+/*LOGO*/
+
+
+/* Primeira sessão cabeçalho */
+.cabecalho .logo .imagem {
+    width: 100px;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    max-width: 1170px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.cabecalho .logo {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.cabecalho .titulo {
+    margin-left: 7px;
+    font-size: 13px;
+    transition: 0.3s ease-in-out;
+
+}
+
+.cabecalho .titulo:hover {
+    color: #1ed760;
+}
+
+.cabecalho .navegacao .menu {
+    display: flex;
+}
+
+.cabecalho .navegacao .menu .item {
+    margin: 10px;
+}
+
+.cabecalho .navegacao .menu .item a {
+    padding: 15px;
+    transition: ease-in-out;
+}
+
+.cabecalho .navegacao .menu .item a:hover {
+    background-color: #1ed760;
+    color: white;
+}
+
+@media (max-width:624px)
+
+/*This is a media query*/
+    {
+    .cabecalho {
+        justify-content: center;
+    }
+
+    .cabecalho .logo {
+        margin-bottom: 30px;
+    }
+
+    .cabecalho .menu .item {
+        font-size: 0.6em + 1vw;
+    }
+
+}
+
+/* Primeira sessão cabeçalho */
+
+/* Segunda sessão Paineis*/
+.conteudo-principal .paineis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    position: relative;
+
+}
+
+.conteudo-principal .paineis .imagem-painel {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(70%);
+
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.conteudo-principal .paineis .projeto1 {
+    background-image: url('../images/painel1.jpg');
+
+
+}
+
+.conteudo-principal .paineis .projeto2 {
+    background-image: url('../images/painel2.jpg');
+
+}
+
+.conteudo-principal .paineis .projeto3 {
+    background-image: url('../images/painel3.jpg');
+
+}
+
+.conteudo-principal .paineis .imagem-painel.mostrar {
+    opacity: 1;
+}
+
+.conteudo-principal .paineis .titulo {
+    color: white;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vw);
+}
+
+.conteudo-principal .paineis .seta {
+    background-image: url('../images/seta.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-indent: 100%;
+    /* Essas 2 alterações serve para ocultar o texto dado a imagem ao ser alterada  */
+    overflow: hidden;
+    /* Caso algum deficiente visual acesse a pagina vai conter a informação necessária. */
+}
+
+.conteudo-principal .paineis .seta.btn-voltar {
+    left: 20px;
+    transform: rotateY(180deg)
+}
+
+.conteudo-principal .paineis .seta.btn-avancar {
+    right: 20px;
+}
+
+@media (max-width: 900px) {
+    .conteudo-principal .paineis {
+        height: 500px;
+    }
+}
+
+/* Segunda sessão Paineis*/
+
+/* Terceira sessão Quem somos*/
+.quem-somos {
+    background-color: #2941ab;
+}
+
+
+.quem-somos .conteudo {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.quem-somos .conteudo .informacoes {
+    width: 40%;
+}
+
+.quem-somos .conteudo .imagem {
+    width: 60%;
+}
+
+.quem-somos .conteudo .informacoes .titulo {
+    font-size: 50px;
+    color: #1ed760;
+    margin-bottom: 20px;
+}
+
+.quem-somos .conteudo .informacoes .texto {
+    font-size: 20px;
+    line-height: 1.5;
+    color: white;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+    .quem-somos .conteudo {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 30px;
+    }
+
+    .quem-somos .conteudo .imagem {
+        display: none;
+
+    }
+
+    .quem-somos .conteudo.informacoes {
+        width: 100%;
+    }
+}
+
+/* Terceira sessão Quem somos*/
+
+/* Quarta sessão Rodapé*/
+.rodape {
+    padding: 80px 0 20px 0;
+}
+
+.rodape .navegacao {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rodape .logo .imagem {
+    width: 100px;
+}
+
+.rodape .redes-sociais {
+    display: flex;
+}
+
+.rodape .redes-sociais a {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    font-size: 30px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    padding: 13px;
+    width: 65px;
+
+}
+
+.rodape .redes-sociais a:hover {
+    background-color: #1ed760;
+    transition: 00.3s ease-in-out;
+}
+
+.rodape .copyright {
+    margin-top: 70px;
+    text-align: center;
+}
+
+@media (max-width: 940px) {
+    .rodape .navegacao {
+        justify-content: center;
+    }
+
+    .rodape .navegacao .logo {
+        margin-bottom: 30px;
+    }
+
+    .rodape .navegacao .logo,
+    .rodape .navegacao .redes-sociais {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Quarta sessão Rodapé*/
